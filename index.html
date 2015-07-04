@@ -22,52 +22,32 @@
           dataType: 'jsonp',
         }).done(function (results) {
 
-          var temp_data = new google.visualization.DataTable();
-          var distance_data = new google.visualization.DataTable();
+          var mixed_data = new google.visualization.DataTable();
 
-          temp_data.addColumn('datetime'); //, 'timestamp');
-          temp_data.addColumn('number'); //, 'celsius');
-          distance_data.addColumn('datetime', 'timestamp');
-          distance_data.addColumn('number', 'inches');
+          mixed_data.addColumn('datetime', 'timestamp');
+          mixed_data.addColumn('number', 'celsius');
+          mixed_data.addColumn('number', 'inches');
 
           $.each(results, function (i, row) {
-            temp_data.addRow([
+            mixed_data.addRow([
               (new Date(row.timestamp)),
               parseFloat(row.temp),
-            ]);
-            distance_data.addRow([
-              (new Date(row.timestamp)),
               parseFloat(row.distance)
             ]);
           });
 
-          var temp_chart = new google.visualization.LineChart($('#temp_chart').get(0));
 
-          temp_chart.draw(temp_data, {
-            title: 'Bread Detector Temperature',
-            legend: 'none',
-            vAxis: {
-              title: "Celsius", 
-              viewWindowMode:'explicit',
-              viewWindow:{
-                max:40,
-                min:10
-              }
-            }
-          });
+          var mixed_chart = new google.visualization.LineChart($('#mixed_chart').get(0));
 
-          var distance_chart = new google.visualization.LineChart($('#distance_chart').get(0));
-
-          distance_chart.draw(distance_data, {
-            title: 'Bread Detector Distance',
-            legend: 'none',
-            vAxis: {
-              title: "Inches", 
-              viewWindowMode:'explicit',
-              viewWindow:{
-                max:12,
-                min:0
-              }
+          mixed_chart.draw(mixed_data, {
+            title: 'Bread Detector',
+            series: {
+              0: {targetAxisIndex: 0},
+              1: {targetAxisIndex: 1}
+            },
+            vAxes: {
+              0: {title: "temp", viewWindow:{max:40, min:10}},
+              1: {title: "distance", viewWindow:{max:12, min:0}}
             }
           });
 
@@ -88,7 +68,6 @@
 
   </head>
   <body>
-    <div id="temp_chart" style="width: 100%; height: 700px;"></div>
-    <div id="distance_chart" style="width: 100%; height: 700px;"></div>
+    <div id="mixed_chart" style="width: 100%; height: 500px;"></div>
   </body>
 </html>
