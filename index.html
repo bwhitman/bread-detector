@@ -20,25 +20,37 @@
           dataType: 'jsonp',
         }).done(function (results) {
 
-          var data = new google.visualization.DataTable();
+          var temp_data = new google.visualization.DataTable();
+          var distance_data = new google.visualization.DataTable();
 
-          data.addColumn('datetime', 'timestamp');
-          data.addColumn('number', 'temp');
-          data.addColumn('number', 'distance');
+          temp_data.addColumn('datetime', 'timestamp');
+          temp_data.addColumn('number', 'celsius');
+          distance_data.addColumn('datetime', 'timestamp');
+          distance_data.addColumn('number', 'inches');
 
           $.each(results, function (i, row) {
-            data.addRow([
+            temp_data.addRow([
               (new Date(row.timestamp)),
               parseFloat(row.temp),
+            ]);
+            distance_data.addRow([
+              (new Date(row.timestamp)),
               parseFloat(row.distance)
             ]);
           });
 
-          var chart = new google.visualization.LineChart($('#chart').get(0));
+          var temp_chart = new google.visualization.LineChart($('#temp_chart').get(0));
 
-          chart.draw(data, {
-            title: 'Bread Detector'
+          temp_chart.draw(temp_data, {
+            title: 'Bread Detector Temperature'
           });
+
+          var distance_chart = new google.visualization.LineChart($('#distance_chart').get(0));
+
+          distance_chart.draw(distance_data, {
+            title: 'Bread Detector Distance'
+          });
+
 
         });
 
@@ -56,6 +68,7 @@
 
   </head>
   <body>
-    <div id="chart" style="width: 100%;"></div>
+    <div id="temp_chart" style="width: 100%;"></div>
+    <div id="distance_chart" style="width: 100%;"></div>
   </body>
 </html>
