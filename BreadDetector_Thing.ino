@@ -13,8 +13,8 @@ const int LED_PIN = 5; // Thing's onboard, green LED
 const int ANALOG_PIN = A0; // The only analog pin on the Thing
 const int DIGITAL_PIN = 12; // Digital pin to be read
 const char PhantHost[] = "data.sparkfun.com";
-const char PublicKey[] = "***REMOVED***";
-const char PrivateKey[] = "***REMOVED***";
+const char PublicKey[] = "";
+const char PrivateKey[] = "";
 
 OneWire ds(DIGITAL_PIN);  //temperature sensor
 
