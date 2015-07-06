@@ -19,7 +19,6 @@
         // JSONP request
         var jsonData = $.ajax({
           url: 'https://data.sparkfun.com/output/' + public_key + '.json',
-          data: {page: 1},
           dataType: 'jsonp',
         }).done(function (results) {
 
@@ -37,24 +36,6 @@
             ]);
           });
 
-          // do page 2 as well
-          // JSONP request
-          var jsonData = $.ajax({
-            url: 'https://data.sparkfun.com/output/' + public_key + '.json',
-            data: {page: 2},
-            dataType: 'jsonp',
-          }).done(function (results) {
-
-  
-    
-            $.each(results, function (i, row) {
-              mixed_data.addRow([
-                (new Date(row.timestamp)),
-                parseFloat(row.temp),
-                parseFloat(row.distance)
-              ]);
-            });
-
 
 
           var mixed_chart = new google.visualization.LineChart($('#mixed_chart').get(0));
@@ -66,7 +47,7 @@
               1: {targetAxisIndex: 1}
             },
             vAxes: {
-              0: {title: "temp", viewWindow:{max:30, min:20}},
+              0: {title: "temp", viewWindow:{max:35, min:20}},
               1: {title: "distance", viewWindow:{max:4, min:0}}
             }
           });
