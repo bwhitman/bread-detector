@@ -37,6 +37,25 @@
             ]);
           });
 
+          // do page 2 as well
+          // JSONP request
+          var jsonData = $.ajax({
+            url: 'https://data.sparkfun.com/output/' + public_key + '.json',
+            data: {page: 2},
+            dataType: 'jsonp',
+          }).done(function (results) {
+
+  
+    
+            $.each(results, function (i, row) {
+              mixed_data.addRow([
+                (new Date(row.timestamp)),
+                parseFloat(row.temp),
+                parseFloat(row.distance)
+              ]);
+            });
+
+
 
           var mixed_chart = new google.visualization.LineChart($('#mixed_chart').get(0));
 
