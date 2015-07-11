@@ -8,7 +8,7 @@ A DIY WiFi sensor to measure the size and temperature of rising bread.
 
 ![Phone bread](http://aps.s3.amazonaws.com/sslXk.png)
 
-Bread Detector visualizes the shape and internal temperature your dough as it rises, so you can do other things and check up on it from your phone once in a while. 
+Bread Detector visualizes the shape and internal temperature of your dough as it rises, so you can do other things and check up on it from your phone once in a while. 
 
 *You can build it yourself!* We used the great -- and free -- [Phant](http://data.sparkfun.com) data logging service and the low-cost [Sparkfun Thing](https://www.sparkfun.com/products/13231) platform. The raw parts cost about $60. It's a lot of fun to build and play with. You get to eat a lot of bread. We hope you enjoy it,
 
