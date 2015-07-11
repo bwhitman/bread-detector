@@ -37,7 +37,7 @@ We've made a [Sparkfun Wist List](https://www.sparkfun.com/wish_lists/114168) wi
 
 ## Hookup
 
-The distance sensor is analog and goes to the `MCU`'s `ADC`. It needs a 1/3rd voltage divider, as the Thing's ADC only reads 0 to 1V:
+The distance sensor is analog and goes to the `MCU`'s `ADC`. It needs a 1/3rd [voltage divider resistor circuit](https://en.wikipedia.org/wiki/Voltage_divider#Resistive_divider), as the ESP8266's ADC only reads 0 to 1V:
 
  - `DIST` `Vo` (yellow on JST) to `R1` to `MCU` `ADC`. `MCU` `ADC` to `R2` to `MCU` `Vin`.
  - `DIST` `GND` (black) to `MCU` `GND`.
@@ -53,7 +53,7 @@ The `MCU` has a soldered-on JST connector for the battery. The battery is charge
 
  - `BATT` to `MCU` JST connector
 
-The `MCU` has a set of six pins for the FTDI programmer (which you only need during the setup, and not afterwards)
+The `MCU` has a set of six pins for the FTDI programmer (which you only need during the first-time setup, and not afterwards)
 
  - FTDI breakout board into the `MCU` header pins
  
