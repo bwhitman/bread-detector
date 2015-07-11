@@ -33,9 +33,7 @@ And some tools you might already have to make it easier
      - `R2` = 1kΩ
      - `R3` = 4.7kΩ
  
-We've made a [Sparkfun Wist List](https://www.sparkfun.com/wish_lists/114168) with all the things in it, for convenience. 
-
-<script src="https://www.sparkfun.com/wish_lists/114168.js"></script>
+We've made a [Sparkfun Wist List](https://www.sparkfun.com/wish_lists/114168) with all the parts in it (including things you might already have), for convenience. 
 
 ## Hookup
 
