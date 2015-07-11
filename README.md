@@ -12,7 +12,7 @@ Bread Detector visualizes the shape and internal temperature of your dough as it
 
 *You can build it yourself!* We used the great -- and free -- [Phant](http://data.sparkfun.com) data logging service and the low-cost [Sparkfun Thing](https://www.sparkfun.com/products/13231) platform. The raw parts cost about $60. It's a lot of fun to build and play with. You get to eat a lot of bread. We hope you enjoy it,
 
--- *Maureen and Brian*
+-- *[Maureen](https://twitter.com/cookbook) and [Brian](https://twitter.com/bwhitman)*
 
 ## Parts List
 
