@@ -16,19 +16,19 @@ We hope you enjoy it,
 
  - [Lithium Ion Battery](https://www.sparkfun.com/products/341)
  - [ESP8266 Thing] (https://www.sparkfun.com/products/13231)
- - [FTDI Basic Breakout] (https://www.sparkfun.com/products/9873)
  - [Waterproof Temperature Sensor] (https://www.sparkfun.com/products/11050)
  - [Infrared Distance Sensor] (https://www.sparkfun.com/products/12728)
  
-And some tools you already have to make it easier
-
+And some tools you might already have to make it easier
+ 
+ - [FTDI Basic Breakout] (https://www.sparkfun.com/products/9873) for programming
  - breakaway headers
  - hookup wire
  - 3-pin JST cables / terminals
  - a breadboard 
  - 3 resistors: `R1` = 2.2kΩ, `R2` = 1kΩ , `R3` = 4.7kΩ
  
-We've made a [Sparkfun Wist List](https://www.sparkfun.com/products/12728) with the main things in it, for convenience.
+We've made a [Sparkfun Wist List](https://www.sparkfun.com/products/12728) with all the things in it, for convenience. 
 
 ## Hookup
 
