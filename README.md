@@ -40,7 +40,7 @@ We've made a [Sparkfun Wist List](https://www.sparkfun.com/wish_lists/114168) wi
  - `DIST` `Vo` (yellow on JST) to `R1` to `MCU` `ADC`. `MCU` `ADC` to `R2` to `MCU` `Vin`.
  - `DIST` `GND` (black) to `MCU` `GND`.
  - `DIST` `Vcc` (red) to `MCU` `Vin`.
- - `TEMP` `DQ` (yellow) to `R3` to `TEMP` `Vcc` (red). `TEMP` `DQ` also to `MCU` `12`.
+ - `TEMP` `DQ` (yellow) to `R3` to `TEMP` `Vdd` (red). `TEMP` `DQ` also to `MCU` `12`.
  - `TEMP` `GND` (black) to `MCU` `GND`.
  - `TEMP` `Vdd` (red) to `MCU` `Vin`.
  - `BATT` to `MCU` JST connector
