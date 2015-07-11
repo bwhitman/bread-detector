@@ -52,7 +52,7 @@ The micro-USB jack on the ESP8266 charges the battery, which is handy. The batte
  - Fork or clone this repository
  - Make sure to follow [Sparkfun's guide to setting up the Arduino environment for the ESP8266.](https://learn.sparkfun.com/tutorials/esp8266-thing-hookup-guide/installing-the-esp8266-arduino-addon)
  - Create a sketch with the three files in the master branch of this repository: the .ino, and the OneWire.h / .cpp
- - Create a [free stream](https://data.sparkfun.com/streams/make) on data.sparkfun.com with the fields `distance`, `raw_distance`, and `temp`. Note the keys
+ - Create a [free stream](https://data.sparkfun.com/streams/make) on data.sparkfun.com with the fields `distance`, `raw_distance`, and `temp`.
  - Create a file called `auth.h` in the sketch with the following
 ```
      const char WiFiSSID[] = "your wifi SSID";
@@ -66,7 +66,7 @@ The micro-USB jack on the ESP8266 charges the battery, which is handy. The batte
 
 ## Getting ready to rise
 
-You should make something nice to hold the distance sensor over the proofing bowl. We took a [plastic mixer "splash guard"](http://www.amazon.com/Hutzler-3555-Mixer-Splatter-Guard/dp/B005BPZ7UW) and cut a little slot for the distance sensor. The temperature wire just snakes in and gets put under the dough. You want the distance sensor in the middle, with at least a few inches over the dough. (The minimum accurate reading seems to be about 0.8 inches from the sensor, maximum is about 12 inches.) 
+You should make something nice to hold the distance sensor over the rising bowl. We took a [plastic mixer "splash guard"](http://www.amazon.com/Hutzler-3555-Mixer-Splatter-Guard/dp/B005BPZ7UW) and cut a little slot for the distance sensor. The temperature wire just snakes in and gets put under the dough. You want the distance sensor in the middle, with at least a few inches over the dough. (The minimum accurate reading seems to be about 0.8 inches from the sensor, maximum is about 12 inches.) 
 
 ![Detecting some bread](http://aps.s3.amazonaws.com/NPyd0.png)
 
