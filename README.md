@@ -50,7 +50,8 @@ I've made a [Sparkfun Wist List](https://www.sparkfun.com/products/12728) with t
      const char PublicKey[] = "your data.sparkfun.com's public key";
      const char PrivateKey[] = "your data.sparkfun.com's private key";
 ```
- - Set up a [GitHub Page](https://pages.github.com/) for your forked repository, or place the html in the `gh-pages` branch on a publicly available web server. 
+ - Set up a [GitHub Page](https://pages.github.com/) for your forked repository, or place the html that is in the `gh-pages` branch on a publicly available web server. 
+ - On the `index.html` file, change the `public_key` variable to the one you have (otherwise, you'll only see my bread)
  - Program the ESP8266 in Arduino
 
 ## Using
