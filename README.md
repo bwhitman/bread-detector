@@ -1,4 +1,6 @@
-# Bread Detector
+![Bread](http://aps.s3.amazonaws.com/fhXiG.png)
+
+# The Bread Detector
 
 A simple WiFi sensor to measure the rise and temperature of rising bread. 
 
