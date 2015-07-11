@@ -51,7 +51,7 @@ The micro-USB jack on the ESP8266 charges the battery, which is handy. The batte
  
  - Fork or clone this repository
  - Make sure to follow [Sparkfun's guide to setting up the Arduino environment for the ESP8266.](https://learn.sparkfun.com/tutorials/esp8266-thing-hookup-guide/installing-the-esp8266-arduino-addon)
- - Create a sketch with the three files in the master branch of this repository: the .ino, and the OneWire.h / .cpp
+ - Create a sketch with the files in the master branch of this repository: the `BreadDetector.ino`, `OneWire.h` and `OneWire.cpp`.
  - Create a [free stream](https://data.sparkfun.com/streams/make) on data.sparkfun.com with the fields `distance`, `raw_distance`, and `temp`.
  - Create a file called `auth.h` in the sketch with the following
 ```
@@ -60,9 +60,9 @@ The micro-USB jack on the ESP8266 charges the battery, which is handy. The batte
      const char PublicKey[] = "your data.sparkfun.com's public key";
      const char PrivateKey[] = "your data.sparkfun.com's private key";
 ```
- - Set up a [GitHub Page](https://pages.github.com/) for your forked repository, or place the html that is in the `gh-pages` branch on a publicly available web server. (You can also just load `index.html` locally on your computer to see the graph.)
- - On the `index.html` file, change the `public_key` variable to the one you have (otherwise, you'll only see our bread)
- - Program the ESP8266 in Arduino
+ - Set up a [GitHub Page](https://pages.github.com/) for your forked repository, or place the [index.html that is in the `gh-pages` branch](https://github.com/bwhitman/bread-detector/blob/gh-pages/index.html) on a publicly available web server. You can also just open `index.html` locally on your computer to see the graph.
+ - In the `index.html` file, change the `public_key` variable to yours, otherwise, you'll only see our bread.
+ - Connect and program the sketch to the ESP8266 in Arduino
 
 ## Getting ready to rise
 
