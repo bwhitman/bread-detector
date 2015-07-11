@@ -53,7 +53,7 @@ The `MCU` has a soldered-on JST connector for the battery. The battery is charge
 
  - `BATT` to `MCU` JST connector
 
-The `MCU` a set of pins for the FTDI programmer (which you only need during the setup, and not afterwards)
+The `MCU` has a set of six pins for the FTDI programmer (which you only need during the setup, and not afterwards)
 
  - FTDI breakout board into the `MCU` header pins
  
