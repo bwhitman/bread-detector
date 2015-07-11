@@ -94,5 +94,5 @@ You should make something nice to hold the distance sensor over the rising bowl.
 
 ## A bread recipe from Maureen
 
-![A bread recipe](http://aps.s3.amazonaws.com/DAoGk.png)
+[![A bread recipe](http://aps.s3.amazonaws.com/DAoGk.png)](https://twitter.com/cookbook/status/619892224562720768)
 
