@@ -42,7 +42,7 @@ We've made a [Sparkfun Wist List](https://www.sparkfun.com/wish_lists/114168) wi
  - `DIST` `Vcc` (red) to `MCU` `Vin`.
  - `TEMP` `DQ` (yellow) to `R3` to `TEMP` `Vcc` (red). `TEMP` `DQ` also to `MCU` `12`.
  - `TEMP` `GND` (black) to `MCU` `GND`.
- - `TEMP` `Vcc` (red) to `MCU` `Vin`.
+ - `TEMP` `Vdd` (red) to `MCU` `Vin`.
  - `BATT` to `MCU` JST connector
  - FTDI breakout board into the `MCU` header pins (only for programming)
  
