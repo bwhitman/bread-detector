@@ -4,7 +4,7 @@ A simple WiFi sensor to measure the rise and temperature of rising bread.
 
 *Watch your boule from the bar*
 
-![Bread Detector](http://aps.s3.amazonaws.com/g3ICa.png)
+![Phone bread](http://aps.s3.amazonaws.com/sslXk.png)
 
 Bread Detector uses the great [Phant](http://data.sparkfun.com) and [Thing](https://www.sparkfun.com/products/13231) platform on Sparkfun for a free data logging service, and visualizes your bread as it rises, so you can do other things and check it from your phone. The raw parts are about $60 US, and kind of fun to build and play with -- you also get to eat a lot of bread.
 
@@ -64,11 +64,13 @@ The micro-USB jack on the ESP8266 charges the battery, which is handy. The batte
  - On the `index.html` file, change the `public_key` variable to the one you have (otherwise, you'll only see our bread)
  - Program the ESP8266 in Arduino
 
-## Using
+## Getting ready to rise
 
 You should make something nice to hold the distance sensor over the proofing bowl. We took a [plastic mixer "splash guard"](http://www.amazon.com/Hutzler-3555-Mixer-Splatter-Guard/dp/B005BPZ7UW) and cut a little slot for the distance sensor. The temperature wire just snakes in and gets put under the dough. You want the distance sensor in the middle, with at least a few inches over the dough. (The minimum accurate reading seems to be about 0.8 inches from the sensor, maximum is about 12 inches.) 
 
 ![Detecting some bread](http://aps.s3.amazonaws.com/NPyd0.png)
+
+## How to get started
 
  - Set up your bowl with the sensors in the right place
  - Flip on the power switch of the ESP8266
@@ -77,4 +79,4 @@ You should make something nice to hold the distance sensor over the proofing bow
  - The graph will stop updating after 17 hours of rising, so you don't get old rises in your graph from the day before. 
  - If you add it to your home screen on your phone, you'll get a nice icon, mostly reminding you to make bread
 
-![Phone bread](http://aps.s3.amazonaws.com/sslXk.png)
+
