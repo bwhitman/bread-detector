@@ -43,7 +43,7 @@ The distance sensor is analog and goes to the `MCU`'s `ADC`. It needs a 1/3rd vo
  - `DIST` `GND` (black) to `MCU` `GND`.
  - `DIST` `Vcc` (red) to `MCU` `Vin`.
 
-The temperature sensor needs a [perhaps software-replaceable](http://wp.josh.com/2014/06/23/no-external-pull-up-needed-for-ds18b20-temp-sensor/) pull-up resistor, and then connects to the `MCU`'s digital pin `12`. 
+The temperature sensor needs a [(potentially removable)](http://wp.josh.com/2014/06/23/no-external-pull-up-needed-for-ds18b20-temp-sensor/) pull-up resistor, and then connects to the `MCU`'s digital pin `12`. 
 
  - `TEMP` `DQ` (yellow) to `R3` to `TEMP` `Vdd` (red). `TEMP` `DQ` also to `MCU` `12`.
  - `TEMP` `GND` (black) to `MCU` `GND`.
@@ -62,21 +62,23 @@ We made a very simple breakout using a thru-hole breadboard, with JST connectors
 ![Bread Detector in action](http://aps.s3.amazonaws.com/oryNG.png)
 
 ## Setting up
+
+These steps just have to happen once. Once you've programmed the ESP8266 and set up your data stream, you don't need to do any of this again.
  
  - Fork or clone this repository
- - Make sure to follow [Sparkfun's guide to setting up the Arduino environment for the ESP8266.](https://learn.sparkfun.com/tutorials/esp8266-thing-hookup-guide/installing-the-esp8266-arduino-addon)
- - Create a sketch with the files in the master branch of this repository: the `BreadDetector.ino`, `OneWire.h` and `OneWire.cpp`.
+ - Follow all the steps on [this page of Sparkfun's guide to setting up the Arduino environment for the ESP8266.](https://learn.sparkfun.com/tutorials/esp8266-thing-hookup-guide/installing-the-esp8266-arduino-addon)
  - Create a [free stream](https://data.sparkfun.com/streams/make) on data.sparkfun.com with the fields `distance`, `raw_distance`, and `temp`.
- - Create a file called `auth.h` in the sketch with the following
+ - Create a new sketch in Arduino, and add 3 files from the master branch of this repository: the `BreadDetector.ino`, `OneWire.h` and `OneWire.cpp`.
+ - Create a new file called `auth.h` in the sketch and put the following in it, replacing with your details
 ```
      const char WiFiSSID[] = "your wifi SSID";
      const char WiFiPSK[] = "your wifi's password";
      const char PublicKey[] = "your data.sparkfun.com's public key";
      const char PrivateKey[] = "your data.sparkfun.com's private key";
 ```
- - Set up a [GitHub Page](https://pages.github.com/) for your forked repository, or place the [index.html that is in the `gh-pages` branch](https://github.com/bwhitman/bread-detector/blob/gh-pages/index.html) on a publicly available web server. You can also just open `index.html` locally on your computer to see the graph.
- - In the `index.html` file, change the `public_key` variable to yours, otherwise, you'll only see our bread.
- - Connect and program the sketch to the ESP8266 in Arduino
+ - Either set up a [GitHub Page](https://pages.github.com/) for your forked repository, or place the [index.html that is in the `gh-pages` branch](https://github.com/bwhitman/bread-detector/blob/gh-pages/index.html) on a publicly available web server. (You can also just open `index.html` locally on your computer to see the graph.)
+ - In that `index.html` file, change the `public_key` variable to yours, otherwise, you'll only see our bread.
+ - Connect to the FTDI programmer and program the sketch to the ESP8266 in Arduino.
 
 ## Getting ready to rise
 
@@ -84,9 +86,9 @@ You should make something nice to hold the distance sensor over the rising bowl.
 
 ![Detecting some bread](http://aps.s3.amazonaws.com/NPyd0.png)
 
-## How to get started
+## Rise process
 
- - Set up your bowl with the sensors in the right place
+ - Set up your bowl with the sensors in the right place. Maybe have some dough in there.
  - Flip on the power switch of the ESP8266
  - After a few seconds, watch your data come in on your data.sparkfun.com stream: you can look at the raw data on the site itself, or navigate to your own copy of the visualization. 
  - The data should update every 20 seconds.
