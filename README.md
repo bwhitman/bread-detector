@@ -77,4 +77,4 @@ You should make something nice to hold the distance sensor over the proofing bow
  - The graph will stop updating after 17 hours of rising, so you don't get old rises in your graph from the day before. 
  - If you add it to your home screen on your phone, you'll get a nice icon, mostly reminding you to make bread
 
-[!Phone bread](http://aps.s3.amazonaws.com/sslXk.png)
+![Phone bread](http://aps.s3.amazonaws.com/sslXk.png)
