@@ -35,6 +35,8 @@ And some tools you might already have to make it easier
  
 We've made a [Sparkfun Wist List](https://www.sparkfun.com/wish_lists/114168) with all the things in it, for convenience. 
 
+<script src="https://www.sparkfun.com/wish_lists/114168.js"></script>
+
 ## Hookup
 
  - `DIST` `Vo` (yellow on JST) to `R1` to `MCU` `ADC`. `MCU` `ADC` to `R2` to `MCU` `Vin`.
