@@ -27,12 +27,10 @@
           mixed_data.addColumn('datetime', 'timestamp');
           mixed_data.addColumn('number', 'celsius');
           mixed_data.addColumn('number', 'inches');
-          //var newThing = results.slice(0, 85); //Math.floor(results.length / 2));
-          console.log(results.length);
           $.each(results, function (i, row) {
-            var yesterday = new Date().getTime() - (1 * 24 * 60 * 60 * 1000);
+            var seventeen_hours_ago = new Date().getTime() - (1 * 17 * 60 * 60 * 1000);
             var date_of_observation = new Date(row.timestamp);
-            if (date_of_observation > yesterday) {
+            if (date_of_observation > seventeen_hours_ago) {
               mixed_data.addRow([
                 (new Date(row.timestamp)),
                 parseFloat(row.temp),
