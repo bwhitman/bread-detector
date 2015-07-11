@@ -49,16 +49,17 @@ The temperature sensor needs a [perhaps software-replaceable](http://wp.josh.com
  - `TEMP` `GND` (black) to `MCU` `GND`.
  - `TEMP` `Vdd` (red) to `MCU` `Vin`.
 
-The `MCU` has a soldered-on JST connector and a set of pins for the programmer (which you only need during the setup, and not afterwards)
+The `MCU` has a soldered-on JST connector for the battery. The battery is charged by the micro-USB jack on the `MCU`, and seems to last a long time.
 
  - `BATT` to `MCU` JST connector
- - FTDI breakout board into the `MCU` header pins (only for programming)
+
+The `MCU` a set of pins for the FTDI programmer (which you only need during the setup, and not afterwards)
+
+ - FTDI breakout board into the `MCU` header pins
  
 We made a very simple breakout using a thru-hole breadboard, with JST connectors for the two sensors:
 
 ![Bread Detector in action](http://aps.s3.amazonaws.com/oryNG.png)
-
-The micro-USB jack on the ESP8266 charges the battery, which is handy. The battery seems to last a long time.
 
 ## Setting up
  
