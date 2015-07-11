@@ -27,13 +27,18 @@
           mixed_data.addColumn('datetime', 'timestamp');
           mixed_data.addColumn('number', 'celsius');
           mixed_data.addColumn('number', 'inches');
-
+          //var newThing = results.slice(0, 85); //Math.floor(results.length / 2));
+          console.log(results.length);
           $.each(results, function (i, row) {
-            mixed_data.addRow([
-              (new Date(row.timestamp)),
-              parseFloat(row.temp),
-              parseFloat(row.distance)
-            ]);
+            var yesterday = new Date().getTime() - (1 * 24 * 60 * 60 * 1000);
+            var date_of_observation = new Date(row.timestamp);
+            if (date_of_observation > yesterday) {
+              mixed_data.addRow([
+                (new Date(row.timestamp)),
+                parseFloat(row.temp),
+                parseFloat(0-row.distance)
+              ]);
+            }
           });
 
 
@@ -48,7 +53,7 @@
             },
             vAxes: {
               0: {title: "temp", viewWindow:{max:35, min:20}},
-              1: {title: "distance", viewWindow:{max:6, min:0}}
+              1: {title: "distance", viewWindow:{max:0, min:-6}}
             }
           });
 
