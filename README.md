@@ -14,10 +14,10 @@ We hope you enjoy it,
 
 ## Parts List
 
- - [Lithium Ion Battery](https://www.sparkfun.com/products/341)
- - [ESP8266 Thing] (https://www.sparkfun.com/products/13231)
- - [Waterproof Temperature Sensor] (https://www.sparkfun.com/products/11050)
- - [Infrared Distance Sensor] (https://www.sparkfun.com/products/12728)
+ - `BATT` = [Lithium Ion Battery](https://www.sparkfun.com/products/341)
+ - `MCU` = [ESP8266 Thing] (https://www.sparkfun.com/products/13231)
+ - `TEMP` = [Waterproof Temperature Sensor] (https://www.sparkfun.com/products/11050)
+ - `DIST` = [Infrared Distance Sensor] (https://www.sparkfun.com/products/12728)
  
 And some tools you might already have to make it easier
  
@@ -26,20 +26,23 @@ And some tools you might already have to make it easier
  - hookup wire
  - 3-pin JST cables / terminals
  - a breadboard 
- - 3 resistors: `R1` = 2.2kΩ, `R2` = 1kΩ , `R3` = 4.7kΩ
+ - 3 resistors: 
+     - `R1` = 2.2kΩ
+     - `R2` = 1kΩ
+     - `R3` = 4.7kΩ
  
 We've made a [Sparkfun Wist List](https://www.sparkfun.com/wish_lists/114168) with all the things in it, for convenience. 
 
 ## Hookup
 
- - Distance sensor `Vo` (yellow on JST) to `R1` to pin `ADC` on the ESP8266. `ADC` to `R2` to `Vin`.
- - Distance sensor `GND` (black) to `GND` on the ESP8266.
- - Distance sensor `Vcc` (red) to `Vin` on the ESP8266.
- - Temperature sensor `DQ` (yellow) to `R3` to temperature sensor `Vcc` (red). `DQ` also to pin `12` on the ESP8266.
- - Temperature sensor `GND` (black) to `GND` on the ESP8266
- - Temperature sensor `Vcc` (red) to `Vin` on the ESP8266
- - Battery into connector on ESP8266
- - FTDI breakout board into the header pins for it on the ESP8266 (only for programming)
+ - `DIST` `Vo` (yellow on JST) to `R1` to `MCU` `ADC`. `MCU` `ADC` to `R2` to `MCU` `Vin`.
+ - `DIST` `GND` (black) to `MCU` `GND`.
+ - `DIST` `Vcc` (red) to `MCU` `Vin`.
+ - `TEMP` `DQ` (yellow) to `R3` to `TEMP` `Vcc` (red). `TEMP` `DQ` also to `MCU` `12`.
+ - `TEMP` `GND` (black) to `MCU` `GND`.
+ - `TEMP` `Vcc` (red) to `MCU` `Vin`.
+ - `BATT` to `MCU` JST connector
+ - FTDI breakout board into the `MCU` header pins (only for programming)
  
 We made a very simple breakout using a thru-hole breadboard, with JST connectors for the two sensors:
 
