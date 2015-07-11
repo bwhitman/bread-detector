@@ -8,6 +8,10 @@ A simple WiFi sensor to measure the rise and temperature of rising bread.
 
 Bread Detector uses the great [Phant](http://data.sparkfun.com) and [Thing](https://www.sparkfun.com/products/13231) platform on Sparkfun for a free data logging service, and visualizes your bread as it rises, so you can do other things and check it from your phone. The raw parts are about $60 US, and kind of fun to build and play with -- you also get to eat a lot of bread.
 
+We hope you enjoy it,
+
+-- *Maureen and Brian*
+
 ## Parts List
 
  - [Lithium Ion Battery](https://www.sparkfun.com/products/341)
@@ -24,7 +28,7 @@ And some tools you already have to make it easier
  - a breadboard 
  - 3 resistors: `R1` = 2.2 kOhm, `R2` = 1 kOhm, `R3` = 4.7 kOhm
  
-I've made a [Sparkfun Wist List](https://www.sparkfun.com/products/12728) with the main things in it, for convenience.
+We've made a [Sparkfun Wist List](https://www.sparkfun.com/products/12728) with the main things in it, for convenience.
 
 ## Hookup
 
@@ -37,7 +41,7 @@ I've made a [Sparkfun Wist List](https://www.sparkfun.com/products/12728) with t
  - Battery into connector on ESP8266
  - FTDI breakout board into the header pins for it on the ESP8266 (only for programming)
  
-I made a very simple breakout using a thru-hole breadboard, with JST connectors for the two sensors:
+We made a very simple breakout using a thru-hole breadboard, with JST connectors for the two sensors:
 
 ![Bread Detector in action](http://aps.s3.amazonaws.com/oryNG.png)
 
