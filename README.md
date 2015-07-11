@@ -37,12 +37,20 @@ We've made a [Sparkfun Wist List](https://www.sparkfun.com/wish_lists/114168) wi
 
 ## Hookup
 
+The distance sensor is analog and goes to the `MCU`'s `ADC`. It needs a 1/3rd voltage divider, as the Thing's ADC only reads 0 to 1V:
+
  - `DIST` `Vo` (yellow on JST) to `R1` to `MCU` `ADC`. `MCU` `ADC` to `R2` to `MCU` `Vin`.
  - `DIST` `GND` (black) to `MCU` `GND`.
  - `DIST` `Vcc` (red) to `MCU` `Vin`.
+
+The temperature sensor needs a [perhaps software-replaceable](http://wp.josh.com/2014/06/23/no-external-pull-up-needed-for-ds18b20-temp-sensor/) pull-up resistor, and then connects to the `MCU`'s digital pin `12`. 
+
  - `TEMP` `DQ` (yellow) to `R3` to `TEMP` `Vdd` (red). `TEMP` `DQ` also to `MCU` `12`.
  - `TEMP` `GND` (black) to `MCU` `GND`.
  - `TEMP` `Vdd` (red) to `MCU` `Vin`.
+
+The `MCU` has a soldered-on JST connector and a set of pins for the programmer (which you only need during the setup, and not afterwards)
+
  - `BATT` to `MCU` JST connector
  - FTDI breakout board into the `MCU` header pins (only for programming)
  
