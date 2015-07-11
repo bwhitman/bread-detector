@@ -28,7 +28,7 @@ And some tools you might already have to make it easier
  - a breadboard 
  - 3 resistors: `R1` = 2.2kΩ, `R2` = 1kΩ , `R3` = 4.7kΩ
  
-We've made a [Sparkfun Wist List](https://www.sparkfun.com/products/12728) with all the things in it, for convenience. 
+We've made a [Sparkfun Wist List](https://www.sparkfun.com/wish_lists/114168) with all the things in it, for convenience. 
 
 ## Hookup
 
