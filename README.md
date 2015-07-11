@@ -26,7 +26,7 @@ And some tools you already have to make it easier
  - hookup wire
  - 3-pin JST cables / terminals
  - a breadboard 
- - 3 resistors: `R1` = 2.2 kOhm, `R2` = 1 kOhm, `R3` = 4.7 kOhm
+ - 3 resistors: `R1` = 2.2kΩ, `R2` = 1kΩ , `R3` = 4.7kΩ
  
 We've made a [Sparkfun Wist List](https://www.sparkfun.com/products/12728) with the main things in it, for convenience.
 
@@ -61,16 +61,18 @@ The micro-USB jack on the ESP8266 charges the battery, which is handy. The batte
      const char PrivateKey[] = "your data.sparkfun.com's private key";
 ```
  - Set up a [GitHub Page](https://pages.github.com/) for your forked repository, or place the html that is in the `gh-pages` branch on a publicly available web server. (You can also just load `index.html` locally on your computer to see the graph.)
- - On the `index.html` file, change the `public_key` variable to the one you have (otherwise, you'll only see my bread)
+ - On the `index.html` file, change the `public_key` variable to the one you have (otherwise, you'll only see our bread)
  - Program the ESP8266 in Arduino
 
 ## Using
 
-You should make something nice to hold the distance sensor over the proofing bowl. We took a [plastic mixer "splash guard"](http://www.amazon.com/Hutzler-3555-Mixer-Splatter-Guard/dp/B005BPZ7UW) and cut a little slot for the distance sensor. The temperature wire just snakes in and gets put under the dough. You want the distance sensor in the middle, with at least a few inches over it. (The minimum accurate reading seems to be about 0.8 inches from the sensor, maximum is about 12 inches.) 
+You should make something nice to hold the distance sensor over the proofing bowl. We took a [plastic mixer "splash guard"](http://www.amazon.com/Hutzler-3555-Mixer-Splatter-Guard/dp/B005BPZ7UW) and cut a little slot for the distance sensor. The temperature wire just snakes in and gets put under the dough. You want the distance sensor in the middle, with at least a few inches over the dough. (The minimum accurate reading seems to be about 0.8 inches from the sensor, maximum is about 12 inches.) 
 
 ![Detecting some bread](http://aps.s3.amazonaws.com/NPyd0.png)
 
  - Set up your bowl with the sensors in the right place
  - Flip on the power switch of the ESP8266
- - Watch your data come in on your data.sparkfun.com stream: you can look at the raw data on the site itself, or navigate to your own copy of the visualization. 
+ - After a few seconds, watch your data come in on your data.sparkfun.com stream: you can look at the raw data on the site itself, or navigate to your own copy of the visualization. 
+ - The data should update every 20 seconds.
+ - The graph will stop updating after 17 hours of rising, so you don't get old rises in your graph from the day before. 
 
