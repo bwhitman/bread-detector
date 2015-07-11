@@ -42,7 +42,7 @@ I've made a [Sparkfun Wist List](https://www.sparkfun.com/products/12728) with t
  - Fork or clone this repository
  - Make sure to follow [Sparkfun's guide to setting up the Arduino environment for the ESP8266.](https://learn.sparkfun.com/tutorials/esp8266-thing-hookup-guide/installing-the-esp8266-arduino-addon)
  - Create a sketch with the three files in the master branch of this repository: the .ino, and the OneWire.h / .cpp
- - Create a [free stream](https://data.sparkfun.com/streams/make) on data.sparkfun.com, and note the keys
+ - Create a [free stream](https://data.sparkfun.com/streams/make) on data.sparkfun.com with the fields `distance`, `raw_distance`, and `temp`. Note the keys
  - Create a file called `auth.h` in the sketch with the following
 ```
      const char WiFiSSID[] = "your wifi SSID";
